@@ -1,1 +1,135 @@
-
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICT-route | Startpagina</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      height: 540px;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      background: #0b0e16;
+    }
+    body { padding: 0 10px 10px; }
+    main {
+      position: relative;
+      width: min(1000px, 100%);
+      height: 480px;
+      margin: 50px auto 0;
+      padding: 13px 24px;
+      border: 2px solid #ff5900;
+      border-radius: 20px;
+      background: linear-gradient(125deg, #101b32 0%, #25324d 35%, #694039 70%, #b44d20 100%);
+      box-shadow: 0 0 18px rgba(255, 89, 0, .25), inset 0 0 30px rgba(0, 0, 0, .3);
+    }
+    header { height: 62px; display: flex; justify-content: space-between; align-items: center; margin: 0 4px 12px; }
+    .logo { max-height: 54px; width: auto; object-fit: contain; }
+    .slogan { color: #ff5900; font-weight: 900; font-size: clamp(1.45rem, 3vw, 2.25rem); letter-spacing: .04em; text-shadow: 0 2px 9px #000, 0 0 13px rgba(255, 89, 0, .55); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 21px 25px;
+      align-items: start;
+    }
+    .card { --colour: #62d7ff; text-align: center; }
+    .card a { display: inline-block; width: 100%; text-decoration: none; color: #fff; outline: none; }
+    .image-wrap {
+      position: relative;
+      display: block;
+      padding: 5px;
+      border-radius: 17px;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--colour) 75%, white), var(--colour));
+      box-shadow: 0 0 12px var(--colour), 0 0 30px color-mix(in srgb, var(--colour) 68%, transparent), 0 0 60px color-mix(in srgb, var(--colour) 40%, transparent);
+      transition: transform .24s ease, box-shadow .24s ease, filter .24s ease;
+    }
+    img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #151925; }
+    .name { display: block; margin-top: 8px; font-size: clamp(.9rem, 1.45vw, 1.12rem); font-weight: 800; letter-spacing: .025em; text-shadow: 0 2px 8px #000; }
+    .card a:hover .image-wrap, .card a:focus-visible .image-wrap { transform: translateY(-8px) scale(1.025); filter: brightness(1.12); box-shadow: 0 0 16px var(--colour), 0 0 42px var(--colour), 0 0 80px color-mix(in srgb, var(--colour) 70%, transparent); }
+    .card a:focus-visible .image-wrap { outline: 3px solid #fff; outline-offset: 6px; }
+    .sigrid { --colour: #ff5900; }
+    .connected { --colour: #9447f0; }
+    .future { --colour: #27c6c1; }
+    .senr { --colour: #2f80ed; }
+    .greenpi { --colour: #90f87b; }
+    .bootup { --colour: #fade29; }
+    .firstline { --colour: #e53935; }
+    .bpv { --colour: #546e7a; }
+    .kilroy-window {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(250px, 60%);
+      aspect-ratio: 1;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .kilroy-window img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      border-radius: 0;
+      background: transparent;
+    }
+    @media (max-width: 700px) { .cards { grid-template-columns: repeat(2, minmax(135px, 1fr)); gap: 16px; } body { height: auto; min-height: 100vh; overflow: auto; } main { height: auto; min-height: 480px; padding: 13px 16px 22px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <a href="https://www.ter-aa.nl/" aria-label="Naar de website van Ter AA"><img class="logo" src="ter-aa-logo(2).png" alt="Ter AA"></a>
+      <div class="slogan">Future in the making</div>
+    </header>
+    <section class="cards" aria-label="Beroepsprojecten">
+      <!-- Vervang alleen de # hieronder door jouw eigen link. -->
+      <article class="card future"><a href="https://ocidmisupport-cyber.github.io/your-future-in-it/"><span class="image-wrap"><img src="Your Future in ICT BP00.jpg" alt="Your Future in ICT"></span><span class="name">Your Future in ICT</span></a></article>
+      <article class="card sigrid"><a href="https://ocidmisupport-cyber.github.io/sigridstyling-2/"><span class="image-wrap"><img src="Sigrid styling BP01.jpg" alt="Sigrid Styling"></span><span class="name">Sigrid Styling</span></a></article>
+      <article class="card connected"><a href="https://ocidmisupport-cyber.github.io/all-connected/"><span class="image-wrap"><img src="All%20Connected%20%20BP02.jpg" alt="All Connected"></span><span class="name">All Connected</span></a></article>
+      <article class="card senr"><a href="https://ocidmisupport-cyber.github.io/S-en-R-Trucks-2.0/"><span class="image-wrap"><img src="S%26R%20Trucks%20%20BP03.jpg" alt="S&amp;R Trucks"></span><span class="name">S&amp;R Trucks</span></a></article>
+      <article class="card greenpi"><a href="https://ocidmisupport-cyber.github.io/Green-Pi-Machine/"><span class="image-wrap"><img src="Green%20Pi%20Trucks%20%20BP04.jpg" alt="Green Pi Machine"></span><span class="name">Green Pi Machine</span></a></article>
+      <article class="card bootup"><a href="https://ocidmisupport-cyber.github.io/boot-up/"><span class="image-wrap"><img src="Boot Up PVB04.jpg" alt="Boot Up"></span><span class="name">Boot Up</span></a></article>
+      <article class="card firstline"><a href="https://ocidmisupport-cyber.github.io/first-line/"><span class="image-wrap"><img src="First Line PVB06.jpg" alt="First Line"></span><span class="name">First Line</span></a></article>
+      <article class="card bpv"><a href="https://ocidmisupport-cyber.github.io/BPV-7-8/"><span class="image-wrap"><img src="BPV 7-8.jpg" alt="BPV 7-8"></span><span class="name">BPV 7-8</span></a></article>
+    </section>
+  </main>
+  <script>
+    (() => {
+      // One appearance per page load, after a random 5–20 second delay.
+      const source = 'https://raw.githubusercontent.com/ocidmisupport-cyber/documents/df481e1d8e85f0c6422b6a3cd436baf9321843a9/AAdjes/robotje-kilroy-250x250.gif';
+      const delay = 5000 + Math.random() * 15000;
+      const ready = new Promise(resolve => window.setTimeout(resolve, delay));
+      // Prepare the bytes first so the animation starts at its first frame.
+      fetch(source).then(response => {
+        if (!response.ok) throw new Error('Robotje niet beschikbaar');
+        return response.blob();
+      }).then(async blob => {
+        await ready;
+        const url = URL.createObjectURL(blob);
+        const robot = new Image(250, 250);
+        robot.alt = '';
+        const windowElement = document.createElement('div');
+        windowElement.className = 'kilroy-window';
+        windowElement.setAttribute('aria-hidden', 'true');
+        robot.onload = () => {
+          document.querySelector('main').append(windowElement);
+          // The supplied GIF lasts 5.96 seconds; remove before it repeats.
+          window.setTimeout(() => {
+            windowElement.remove();
+            URL.revokeObjectURL(url);
+          }, 5960);
+        };
+        robot.onerror = () => URL.revokeObjectURL(url);
+        windowElement.append(robot);
+        robot.src = url;
+      }).catch(() => {});
+    })();
+  </script>
+</body>
+</html>
